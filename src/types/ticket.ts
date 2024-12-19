@@ -1,3 +1,7 @@
+export type TCurrency = 'rub' | 'usd' | 'eur'
+export const STOPS_ALL = 9
+export type TTransferStops = 0 | 1 | 2 | 3 | typeof STOPS_ALL
+
 export interface ITicket {
   origin: string;
   origin_name: string;
@@ -12,7 +16,3 @@ export interface ITicket {
   price: number;
   currencyPrice?: string;
 }
-
-export type TCurrency = 'rub' | 'usd' | 'eur'
-export const STOPS_ALL = 9
-export type TTransferStops = 0 | 1 | 2 | 3 | typeof STOPS_ALL

@@ -1,6 +1,6 @@
 import {createContext, ReactNode, useContext, useState} from "react";
 import {ITicket, STOPS_ALL, TCurrency, TTransferStops} from "../types/ticket.ts";
-import {tickets as Tickets} from '../assets/tickets.json'
+import {tickets as Tickets} from '../assets/tickets.ts'
 import {getPrice} from "../helper/getPrice.ts";
 
 interface ITicketProviderProps {
@@ -55,7 +55,7 @@ export const TicketProvider = ({children}: ITicketProviderProps) =>  {
       }
       setTransferStops(prevState => [...prevState.filter((stops) => stops !== STOPS_ALL), newTransferStops])
     } else {
-      setTransferStops(prevState => prevState.filter((stops, i) => i !== index))
+      setTransferStops(prevState => prevState.filter((_, i) => i !== index))
     }
   }
 

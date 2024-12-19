@@ -50,7 +50,7 @@ export const Filter: FC = () => {
     setNewCurrency(value)
   }
 
-  const handleChangeStops = (value: TTransferStops, only) => {
+  const handleChangeStops = (value: TTransferStops, only: boolean | undefined) => {
     console.log(value, only)
       setNewTransferStops(value, only)
   }
