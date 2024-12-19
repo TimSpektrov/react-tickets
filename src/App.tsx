@@ -5,7 +5,7 @@ function App() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <img className={styles.logo} src={'src/assets/images/airplane.png'} alt='logo' />
+        <img className={styles.logo} src={'/images/airplane.png'} alt='logo' />
       </header>
       <main className={styles.main}>
         <Filter />
