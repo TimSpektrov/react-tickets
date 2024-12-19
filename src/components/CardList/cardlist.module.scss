@@ -6,6 +6,7 @@
 .item {
   box-shadow: var(--box-shadow-card);
   border-radius: var(--border-radius-card);
+  background-color: var(--bg-card);
   &:not(:last-child) {
     margin-bottom: 30px;
   }

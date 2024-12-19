@@ -1,3 +1,4 @@
+@use "assets/style/media";
 .container {
   width: 100%;
   max-width: 1260px;
@@ -17,7 +18,11 @@
 }
 
 .main {
-  display: grid;
-  grid-template-columns: 340px 1fr;
+  display: flex;
   gap: 30px;
+  flex-direction: column;
+
+  @include media.media-desktop {
+    flex-direction: row;
+  }
 }

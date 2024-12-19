@@ -8,8 +8,10 @@
   --color-white: #fff;
   --color-blue: #2196f3;
 
+  /* общие стили самостоятельных блоков */
   --box-shadow-card: 0 0 15px #00000020;
   --border-radius-card: 10px;
+  --bg-card: var(--color-white);
 }
 
 * {

@@ -12,7 +12,7 @@ export interface IFilterStopsProps {
 }
 export const FilterStops: FC<IFilterStopsProps> = ({checkboxes, transferStops, onChange, onClick}) => {
   return(
-    <>
+    <div>
     <div className={styles.container}>
       <Text size={20} As={'h3'} weight={'medium'} color={'grey-dark'}>
         КОЛИЧЕСТВО ПЕРЕСАДОК
@@ -30,6 +30,6 @@ export const FilterStops: FC<IFilterStopsProps> = ({checkboxes, transferStops, o
           />
         ))}
       </div>
-    </>
+    </div>
   )
 }
