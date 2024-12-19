@@ -14,7 +14,7 @@ const Card: FC<ICardProps> = ({ticket}) => {
   return (
     <div className={styles.card}>
       <div className={styles.left}>
-        <img className={styles.logo} alt={`${ticket.carrier} airlines`} src={`src/assets/images/airlines/${ticket.carrier}.svg`}/>
+        <img className={styles.logo} alt={`${ticket.carrier} airlines`} src={`/images/airlines/${ticket.carrier}.svg`}/>
         <button type='button' className={styles.button}>
           <Text size={24} color={'white'}>
             Купить<br />
