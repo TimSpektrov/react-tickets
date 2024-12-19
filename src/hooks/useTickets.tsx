@@ -7,7 +7,7 @@ interface ITicketProviderProps {
   children: ReactNode
 }
 
-interface ITicketContext {
+export interface ITicketContext {
   filteredTickets: ITicket[];
   currency: TCurrency;
   transferStops: TTransferStops[];
@@ -25,7 +25,7 @@ const initialTicketContext: ITicketContext = {
 
 export const TicketContext = createContext<ITicketContext>(initialTicketContext)
 export const TicketProvider = ({children}: ITicketProviderProps) =>  {
-  const [tickets, setTickets] = useState<ITicket[]>(Tickets)
+  const [tickets] = useState<ITicket[]>(Tickets)
   const [currency, setCurrency] = useState<TCurrency>('rub')
   const [transferStops, setTransferStops] = useState<TTransferStops[]>([])
 
@@ -65,4 +65,4 @@ export const TicketProvider = ({children}: ITicketProviderProps) =>  {
     </TicketContext.Provider>
   )
 }
-export const useTicket = (): ITicketContext => useContext(TicketContext) as ITicketContext
+export const useTicket = (): ITicketContext => useContext(TicketContext)

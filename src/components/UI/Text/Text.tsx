@@ -1,4 +1,4 @@
-import {FC, ReactNode} from "react";
+import {FC} from "react";
 import cn from "classnames";
 import styles from './text.module.scss'
 import {ITextProps} from "../../../types/text.ts";
