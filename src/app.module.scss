@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin-inline: auto;
+  min-height: 100vh;
+  padding: 0 30px 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 70px 30px 0;
+  margin-bottom: 75px;
+}
+.logo {
+  width: 90px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 30px;
+}
