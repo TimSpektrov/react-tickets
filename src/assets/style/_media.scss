@@ -48,3 +48,8 @@ $desktop: 1279.5px;
     @content;
   }
 }
+@mixin media-mobile-desktop {
+  @media screen and (min-width: $mobile) and (max-width: $desktop) {
+    @content;
+  }
+}
