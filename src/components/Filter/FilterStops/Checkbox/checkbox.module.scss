@@ -15,9 +15,7 @@
     background-color: #a0a0ff10;
 
     .buttonOnly {
-      &:not(:disabled) {
         opacity: 1;
-      }
     }
   }
 }
@@ -99,6 +97,18 @@
   color: var(--color-blue);
   font-family: inherit;
   font-size: 18px;
-  opacity: 0;
+
   transition: opacity 0.2s ease-in-out;
+
+  &:disabled {
+    display: none;
+  }
+  @media (pointer: coarse) {
+    opacity: 1;
+  }
+
+
+  @media (pointer: fine) {
+    opacity: 0;
+  }
 }
