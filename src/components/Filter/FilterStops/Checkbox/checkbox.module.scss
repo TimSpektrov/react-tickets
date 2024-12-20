@@ -1,10 +1,15 @@
+@use "../../../../assets/style/media";
 .checkboxContainer {
   display: flex;
   align-items: center;
   cursor: pointer;
   height: 51px;
-  padding-inline: 20px;
+  padding-inline: 10px;
   transition: background-color 0.2s;
+
+  @include media.media-mobile-up {
+    padding-inline: 20px;
+  }
 
   &:hover {
     background-color: #a0a0ff10;
@@ -23,9 +28,9 @@
 
 .checkboxLabel {
   position: relative;
-  padding-left: 45px;
+  padding-left: 30px;
   cursor: pointer;
-  line-height: 30px;
+  line-height: 1;
   font-size: 20px;
   margin-right: 1em;
 
@@ -33,10 +38,9 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
+    top: 0;
+    width: 20px;
+    height: 20px;
     border: 2px solid var(--color-gray-light);
     border-radius: 4px;
     background-color: white;
@@ -47,12 +51,27 @@
     content: '✔';
     position: absolute;
     top: 0;
-    left: 8px;
+    left: 0px;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 20px;
     color: var(--color-blue);
     opacity: 0;
     transition: opacity 0.2s;
+  }
+
+  @include media.media-mobile-up {
+    padding-left: 45px;
+
+    &:before {
+      width: 30px;
+      height: 30px;
+    }
+    &:after {
+      top: 0;
+      left: 8px;
+      font-size: 15px;
+      line-height: 30px;
+    }
   }
 
   input:checked + & {

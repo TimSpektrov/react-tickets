@@ -6,10 +6,11 @@ import {getDateFormatter} from "../../helper/getDateFormatter.ts";
 import {Text} from "../UI/Text";
 
 interface ICardProps {
-  ticket: ITicket
+  ticket: ITicket;
+  isMobile?: boolean;
 }
 
-const Card: FC<ICardProps> = ({ticket}) => {
+const Card: FC<ICardProps> = ({ticket, isMobile}) => {
 
   return (
     <div className={styles.card}>
@@ -28,6 +29,17 @@ const Card: FC<ICardProps> = ({ticket}) => {
           <Text size={48}>
             {ticket.departure_time}
           </Text>
+          {isMobile && (
+            <div>
+              <Text size={18} color={'grey-dark'} As={"p"} weight={'medium'}>
+                {ticket.origin}, {ticket.origin_name}
+              </Text>
+
+              <Text size={18} color={'grey'} As={"p"}>
+                {getDateFormatter(ticket.departure_date)}
+              </Text>
+            </div>
+          )}
           <div className={styles['top-deliver']}>
             <Text size={18} color={'grey'}>
               {getTransferWord(ticket.stops)}
@@ -39,15 +51,17 @@ const Card: FC<ICardProps> = ({ticket}) => {
         </div>
 
         <div className={styles.bottom}>
-          <div>
-            <Text size={18} color={'grey-dark'} As={"p"} weight={'medium'}>
-              {ticket.origin}, {ticket.origin_name}
-            </Text>
+          {!isMobile && (
+            <div>
+              <Text size={18} color={'grey-dark'} As={"p"} weight={'medium'}>
+                {ticket.origin}, {ticket.origin_name}
+              </Text>
 
-            <Text size={18} color={'grey'} As={"p"}>
-              {getDateFormatter(ticket.departure_date)}
-            </Text>
-          </div>
+              <Text size={18} color={'grey'} As={"p"}>
+                {getDateFormatter(ticket.departure_date)}
+              </Text>
+            </div>
+            )}
 
           <div>
             <Text size={18} color={'grey-dark'} As={"p"} weight={'medium'}>

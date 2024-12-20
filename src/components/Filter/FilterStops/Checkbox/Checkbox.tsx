@@ -30,7 +30,7 @@ export const Checkbox: FC<ICheckboxProps> = ({ checked, onChange, onClick, label
         disabled={disabledCheckbox}
         className={styles.checkboxInput}
       />
-      <span className={styles.checkboxLabel}>{label}</span>
+      <div className={styles.checkboxLabel}>{label}</div>
       <button className={styles.buttonOnly} disabled={disabledButton} type='button' onClick={handleButtonClick}>Только</button>
     </label>
   )

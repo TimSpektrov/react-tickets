@@ -1,20 +1,44 @@
 @use "assets/style/media";
 .container {
   width: 100%;
-  max-width: 1260px;
-  margin-inline: auto;
   min-height: 100vh;
-  padding: 0 30px 30px;
+  padding: 0 15px 15px;
+  @include media.media-tablet {
+    padding: 0 30px 30px;
+  }
+  @include media.media-desktop-up {
+    padding: 0 50px 50px;
+    max-width: 1300px;
+    margin-inline: auto;
+  }
 }
 
 .header {
   display: flex;
   justify-content: center;
-  padding: 70px 30px 0;
-  margin-bottom: 75px;
+  padding: 20px 15px 0;
+  margin-bottom: 20px;
+
+  @include media.media-tablet {
+    padding: 30px 30px 0;
+    margin-bottom: 30px;
+  }
+
+  @include media.media-desktop-up {
+    padding: 70px 30px 0;
+    margin-bottom: 75px;
+  }
 }
 .logo {
-  width: 90px;
+  width: 40px;
+
+  @include media.media-tablet {
+    width: 70px;
+  }
+
+  @include media.media-desktop-up {
+    width: 90px;
+  }
 }
 
 .main {
@@ -22,7 +46,7 @@
   gap: 30px;
   flex-direction: column;
 
-  @include media.media-desktop {
+  @include media.media-desktop-up {
     flex-direction: row;
   }
 }

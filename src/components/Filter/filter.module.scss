@@ -12,14 +12,20 @@
   z-index: 2;
   padding-bottom: 20px;
 
-  @include media.media-tablet {
+  @include media.media-desktop-down {
     flex-direction: row;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
 .container {
-  padding: 20px 20px 25px;
+  padding: 10px;
+  @include media.media-mobile-up {
+    padding: 20px 20px 25px;
+  }
 }
 
 .buttons {
