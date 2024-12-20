@@ -6,7 +6,6 @@ import {STOPS_ALL, TCurrency, TTransferStops} from "../../types/ticket.ts";
 import {FilterCurrency} from "./FilterCurrency";
 import {FilterStops} from "./FilterStops";
 import cn from "classnames";
-import {FilterButton} from "./FilterButton/FilterButton.tsx";
 
 const buttonGroup: IFilterButton[] = [
   {
@@ -77,7 +76,7 @@ export const Filter: FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   const handleFilterButtonClick = () => {
     setIsFilterVisible(true)
