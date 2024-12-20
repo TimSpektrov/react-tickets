@@ -38,7 +38,8 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 20px;
     height: 20px;
     border: 2px solid var(--color-gray-light);
@@ -50,8 +51,9 @@
   &:after {
     content: '✔';
     position: absolute;
-    top: 0;
-    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
     font-size: 15px;
     line-height: 20px;
     color: var(--color-blue);
@@ -67,8 +69,7 @@
       height: 30px;
     }
     &:after {
-      top: 0;
-      left: 8px;
+      left: 10px;
       font-size: 15px;
       line-height: 30px;
     }

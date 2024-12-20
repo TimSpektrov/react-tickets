@@ -13,11 +13,15 @@
   padding-bottom: 20px;
 
   @include media.media-desktop-down {
-    flex-direction: row;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &>* {
+      flex-grow: 1;
+    }
   }
 }
 
