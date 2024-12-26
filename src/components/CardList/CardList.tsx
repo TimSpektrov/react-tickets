@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useTicket } from "../../hooks/useTickets.tsx";
 import Card from "../Card/Card.tsx";
 import styles from "./cardlist.module.scss";

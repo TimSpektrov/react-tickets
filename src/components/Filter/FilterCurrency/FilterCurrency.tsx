@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { TCurrency } from "../../../types/ticket.ts";
 import { IFilterButton } from "../../../types/filter.ts";
 import { Text } from "../../UI/Text";

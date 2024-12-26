@@ -1,4 +1,3 @@
-import React from "react";
 import { CardList } from "./components/CardList";
 import styles from "./app.module.scss";
 import { Filter } from "./components/Filter";

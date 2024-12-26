@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { ITicket } from "../../types/ticket.ts";
 import styles from "./card.module.scss";
 import { getTransferWord } from "../../helper/getTransferWord.ts";
