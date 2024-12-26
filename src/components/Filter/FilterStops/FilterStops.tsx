@@ -1,4 +1,4 @@
-import {FC} from "react";
+import React, {FC} from "react";
 import {Text} from "../../UI/Text";
 import {IFilterCheckbox} from "../../../types/filter.ts";
 import {TTransferStops} from "../../../types/ticket.ts";

@@ -1,4 +1,4 @@
-import {FC, useEffect, useState} from "react";
+import React, {FC, useEffect, useState} from "react";
 import styles from './filter.module.scss'
 import {useTicket} from "../../hooks/useTickets.tsx";
 import {IFilterButton, IFilterCheckbox} from "../../types/filter.ts";

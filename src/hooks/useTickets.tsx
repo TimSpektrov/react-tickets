@@ -1,4 +1,4 @@
-import {createContext, ReactNode, useContext, useState} from "react";
+import React, {createContext, ReactNode, useContext, useState} from "react";
 import {ITicket, STOPS_ALL, TCurrency, TTransferStops} from "../types/ticket.ts";
 import {tickets as Tickets} from '../assets/tickets.ts'
 import {getPrice} from "../helper/getPrice.ts";
