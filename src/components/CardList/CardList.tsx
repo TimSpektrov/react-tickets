@@ -1,30 +1,29 @@
-import {FC, useEffect, useState} from "react";
-import {useTicket} from "../../hooks/useTickets.tsx";
+import { FC, useEffect, useState } from "react";
+import { useTicket } from "../../hooks/useTickets.tsx";
 import Card from "../Card/Card.tsx";
-import styles from './cardlist.module.scss'
+import styles from "./cardlist.module.scss";
 
 export const CardList: FC = () => {
-  const {filteredTickets} = useTicket()
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 560)
+  const { filteredTickets } = useTicket();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 560);
   const getWindowWidth = () => {
-    setIsMobile(window.innerWidth <= 560)
-  }
+    setIsMobile(window.innerWidth <= 560);
+  };
 
   useEffect(() => {
-    window.addEventListener('resize', getWindowWidth)
+    window.addEventListener("resize", getWindowWidth);
 
     return () => {
-      window.removeEventListener('resize', getWindowWidth)
-    }
-
-  },[])
+      window.removeEventListener("resize", getWindowWidth);
+    };
+  }, []);
   return (
     <ul className={styles.list}>
-      {filteredTickets.map(item => (
+      {filteredTickets.map((item) => (
         <li className={styles.item} key={item.price}>
-          <Card ticket={item} isMobile={isMobile}/>
+          <Card ticket={item} isMobile={isMobile} />
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};

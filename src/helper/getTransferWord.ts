@@ -1,6 +1,7 @@
 export const getTransferWord = (count: number): string => {
   switch (count) {
-    case 0: return 'Без пересадок';
+    case 0:
+      return "Без пересадок";
     case 1:
       return `${count} пересадка`;
     case 2:
@@ -10,4 +11,4 @@ export const getTransferWord = (count: number): string => {
     default:
       return `${count} пересадок`;
   }
-}
+};
