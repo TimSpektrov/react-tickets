@@ -1,4 +1,4 @@
-@use '../../assets/style/media';
+@use "../../assets/style/media";
 .card {
   width: 100%;
   @include media.media-tablet-up {
@@ -19,7 +19,7 @@
     padding: 40px 30px;
   }
 
-  @include media.media-mobile{
+  @include media.media-mobile {
     flex-direction: row;
     & > * {
       flex: 0 0 calc(50% - 15px);
@@ -37,7 +37,7 @@
   max-height: 65px;
   width: 100%;
   object-fit: contain;
-  @include media.media-tablet-up{
+  @include media.media-tablet-up {
     max-height: 45px;
   }
 }
@@ -88,7 +88,7 @@
     display: block;
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0.75rem;
     left: 0;
