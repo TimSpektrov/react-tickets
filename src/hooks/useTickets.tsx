@@ -29,7 +29,6 @@ export const TicketProvider = ({children}: ITicketProviderProps) =>  {
   const [currency, setCurrency] = useState<TCurrency>('rub')
   const [transferStops, setTransferStops] = useState<TTransferStops[]>([])
 
-  console.log(transferStops)
   const filteredTickets = [...tickets
     .filter(item => {
       if (transferStops.length === 0 || transferStops.includes(STOPS_ALL)) {
@@ -40,19 +39,16 @@ export const TicketProvider = ({children}: ITicketProviderProps) =>  {
     })
     .map(item => ({...item, currencyPrice: getPrice(item.price, currency)}))]
 
-  console.log('filteredTickets', filteredTickets)
-
   const setNewCurrency = (newCurrency: TCurrency) => {
     if (newCurrency === currency) return
     setCurrency(newCurrency)
   }
   const setNewTransferStops = (newTransferStops: TTransferStops, only: boolean | undefined) => {
     const index = transferStops.indexOf(newTransferStops)
-    console.log('newTransferStops', newTransferStops, 'index', index, 'only', only)
+    if (only || newTransferStops === STOPS_ALL) {
+      return setTransferStops([newTransferStops])
+    }
     if (index === -1) {
-      if (only || newTransferStops === STOPS_ALL) {
-        return setTransferStops([newTransferStops])
-      }
       setTransferStops(prevState => [...prevState.filter((stops) => stops !== STOPS_ALL), newTransferStops])
     } else {
       setTransferStops(prevState => prevState.filter((_, i) => i !== index))

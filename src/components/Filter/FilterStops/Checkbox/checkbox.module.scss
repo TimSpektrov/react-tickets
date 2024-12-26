@@ -1,5 +1,5 @@
 @use "../../../../assets/style/media";
-.checkboxContainer {
+.container {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -14,17 +14,17 @@
   &:hover {
     background-color: #a0a0ff10;
 
-    .buttonOnly {
+    .button {
         opacity: 1;
     }
   }
 }
 
-.checkboxInput {
+.input {
   display: none;
 }
 
-.checkboxLabel {
+.label {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
@@ -88,7 +88,7 @@
   }
 }
 
-.buttonOnly {
+.button {
   margin-left: auto;
   height: 100%;
   text-transform: uppercase;

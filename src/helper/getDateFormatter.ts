@@ -12,5 +12,3 @@ export const getDateFormatter = (date: string) => {
 
   return `${dateArr[0]} ${month} 20${dateArr[2]}, ${weekday.charAt(0).toUpperCase() + weekday.slice(1)}`
 }
-
-// console.log(getDateFormatter("12.10.18")) // 12 окт 2018 Пт

@@ -22,16 +22,16 @@ export const Checkbox: FC<ICheckboxProps> = ({ checked, onChange, onClick, label
   };
 
   return(
-    <label className={styles.checkboxContainer}>
+    <label className={styles.container}>
       <input
         type="checkbox"
         checked={checked}
         onChange={handleCheckboxChange}
         disabled={disabledCheckbox}
-        className={styles.checkboxInput}
+        className={styles.input}
       />
-      <div className={styles.checkboxLabel}>{label}</div>
-      <button className={styles.buttonOnly} disabled={disabledButton} type='button' onClick={handleButtonClick}>Только</button>
+      <div className={styles.label}>{label}</div>
+      <button className={styles.button} disabled={disabledButton} type='button' onClick={handleButtonClick}>Только</button>
     </label>
   )
 }
