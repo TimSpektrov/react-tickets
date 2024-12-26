@@ -15,7 +15,7 @@
     background-color: #a0a0ff10;
 
     .button {
-        opacity: 1;
+      opacity: 1;
     }
   }
 }
@@ -33,7 +33,7 @@
   margin-right: 1em;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 50%;
@@ -43,11 +43,13 @@
     border: 2px solid var(--color-gray-light);
     border-radius: 4px;
     background-color: white;
-    transition: background-color 0.2s, border-color 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s;
   }
 
   &:after {
-    content: '✔';
+    content: "✔";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -81,7 +83,7 @@
       opacity: 1;
     }
   }
-  
+
   input:disabled + &::before {
     border-color: var(--color-gray);
     background-color: lightgray;
@@ -106,7 +108,6 @@
   @media (pointer: coarse) {
     opacity: 1;
   }
-
 
   @media (pointer: fine) {
     opacity: 0;

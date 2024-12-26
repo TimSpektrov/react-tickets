@@ -1,4 +1,4 @@
-import {TCurrency, TTransferStops} from "./ticket.ts";
+import { TCurrency, TTransferStops } from "./ticket.ts";
 
 export interface IFilterButton {
   text: string;
@@ -10,4 +10,3 @@ export interface IFilterCheckbox {
   id: TTransferStops;
   only?: boolean;
 }
-

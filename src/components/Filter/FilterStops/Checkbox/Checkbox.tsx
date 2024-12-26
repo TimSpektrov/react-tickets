@@ -1,5 +1,5 @@
-import React, {FC} from "react";
-import styles from './checkbox.module.scss'
+import React, { FC } from "react";
+import styles from "./checkbox.module.scss";
 
 interface ICheckboxProps {
   checked: boolean;
@@ -9,7 +9,14 @@ interface ICheckboxProps {
   disabledCheckbox?: boolean;
   disabledButton?: boolean;
 }
-export const Checkbox: FC<ICheckboxProps> = ({ checked, onChange, onClick, label, disabledCheckbox, disabledButton }) => {
+export const Checkbox: FC<ICheckboxProps> = ({
+  checked,
+  onChange,
+  onClick,
+  label,
+  disabledCheckbox,
+  disabledButton,
+}) => {
   const handleCheckboxChange = () => {
     if (!disabledCheckbox) {
       onChange(!checked);
@@ -21,7 +28,7 @@ export const Checkbox: FC<ICheckboxProps> = ({ checked, onChange, onClick, label
     }
   };
 
-  return(
+  return (
     <label className={styles.container}>
       <input
         type="checkbox"
@@ -31,7 +38,14 @@ export const Checkbox: FC<ICheckboxProps> = ({ checked, onChange, onClick, label
         className={styles.input}
       />
       <div className={styles.label}>{label}</div>
-      <button className={styles.button} disabled={disabledButton} type='button' onClick={handleButtonClick}>Только</button>
+      <button
+        className={styles.button}
+        disabled={disabledButton}
+        type="button"
+        onClick={handleButtonClick}
+      >
+        Только
+      </button>
     </label>
-  )
-}
+  );
+};
