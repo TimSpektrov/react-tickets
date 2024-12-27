@@ -48,7 +48,7 @@ const checkboxGroup: IFilterCheckbox[] = [
 export const Filter: FC = () => {
   const [isFilterVisible, setIsFilterVisible] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   const { currency, setNewCurrency, transferStops, setNewTransferStops } =
     useTicket();
 

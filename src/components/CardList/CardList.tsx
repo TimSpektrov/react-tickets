@@ -5,8 +5,8 @@ import styles from "./cardlist.module.scss";
 
 export const CardList: FC = () => {
   const { filteredTickets } = useTicket();
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 560);
-  const getWindowWidth = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 560);
+  const getWindowWidth = (): void => {
     setIsMobile(window.innerWidth <= 560);
   };
 

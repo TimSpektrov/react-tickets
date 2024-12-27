@@ -1,4 +1,4 @@
-export const getDateFormatter = (date: string) => {
+export const getDateFormatter = (date: string): string => {
   const dateArr = date.split(".");
   const formatDate = new Date(+dateArr[2], +dateArr[1] - 1, +dateArr[0]);
 

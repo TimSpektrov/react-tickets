@@ -1,7 +1,10 @@
 import { TCurrency } from "../types/ticket.ts";
 
-export const getPrice = (price: number, currency: TCurrency) => {
-  const rate = {
+export type TRate = {
+  [key in TCurrency]: number;
+};
+export const getPrice = (price: number, currency: TCurrency): string => {
+  const rate: TRate = {
     rub: 1,
     usd: 100,
     eur: 110,

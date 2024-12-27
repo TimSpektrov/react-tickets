@@ -38,22 +38,22 @@ export const TicketProvider = ({ children }: ITicketProviderProps) => {
   const [currency, setCurrency] = useState<TCurrency>("rub");
   const [transferStops, setTransferStops] = useState<TTransferStops[]>([]);
 
-  const filteredTickets = [
+  const filteredTickets: ITicket[] = [
     ...tickets
-      .filter((item) => {
+      .filter((item: ITicket) => {
         if (transferStops.length === 0 || transferStops.includes(STOPS_ALL)) {
           return true;
         } else {
           return transferStops.includes(item.stops);
         }
       })
-      .map((item) => ({
+      .map((item: ITicket) => ({
         ...item,
         currencyPrice: getPrice(item.price, currency),
       })),
   ];
 
-  const setNewCurrency = (newCurrency: TCurrency) => {
+  const setNewCurrency = (newCurrency: TCurrency): void => {
     if (newCurrency === currency) return;
     setCurrency(newCurrency);
   };

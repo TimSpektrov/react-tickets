@@ -3,7 +3,7 @@ import styles from "./button.module.scss";
 import cn from "classnames";
 interface IButtonProps {
   text: string;
-  onClick?: () => void;
+  onClick: () => void;
   disabled?: boolean;
   isActive?: boolean;
 }
